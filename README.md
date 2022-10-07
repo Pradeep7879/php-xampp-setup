@@ -1,6 +1,7 @@
 # php-xampp-setup
 
 Installing apache2
+
     • sudo apt install apache2
     • sudo systemctl status apache2
     • sudo apt install php7.4 php7.4-mysql php-common php7.4-cli php7.4-json php7.4-common php7.4-opcache libapache2-mod-php7.4
@@ -18,32 +19,34 @@ Installing apache2
     
 -------------------------------------------------------------------------------------------
    
-    Enable Clean url
-    • sudo a2enmod rewrite
-    • sudo apache2ctl -M
-    • Enable all extentions in php.ini by uncommenting lines
-    • cd /etc/apache2
-    • sudo gedit apache2.conf
-        <Directory "/var/www/html">
-        AllowOverride All
-        </Directory>
+  Enable Clean url
+    
+        • sudo a2enmod rewrite
+        • sudo apache2ctl -M
+        • Enable all extentions in php.ini by uncommenting lines
+        • cd /etc/apache2
+        • sudo gedit apache2.conf
+            <Directory "/var/www/html">
+            AllowOverride All
+            </Directory>
 
-     • sudo gedit /etc/apache2/sites-available/000-default.conf
-        <Directory "/var/www/html">
-        AllowOverride All
-        </Directory>
+         • sudo gedit /etc/apache2/sites-available/000-default.conf
+            <Directory "/var/www/html">
+            AllowOverride All
+            </Directory>
 
-    • sudo service apache2 restart
+        • sudo service apache2 restart
 
 -------------------------------------------------------------------------------------------
 
 Installing PHP libraries
-    • sudo apt-get install -y php-simplexml
-    • sudo apt-get install php-gd
-    • sudo apt-get install php-curl
-    • sudo apt-get install php-mbstring
-    • sudo apt-get install libapache2-mod-php
-    • sudo service apache2 restart
-    • sudo apt-get install php-zip
-    • Enable php mcrypt extension, aes.
-    • Enable mysql, sqlserver extensions and also pdo.
+
+        • sudo apt-get install -y php-simplexml
+        • sudo apt-get install php-gd
+        • sudo apt-get install php-curl
+        • sudo apt-get install php-mbstring
+        • sudo apt-get install libapache2-mod-php
+        • sudo service apache2 restart
+        • sudo apt-get install php-zip
+        • Enable php mcrypt extension, aes.
+        • Enable mysql, sqlserver extensions and also pdo.
